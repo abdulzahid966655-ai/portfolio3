@@ -239,6 +239,17 @@
     gap: 20px;
     position: relative;
   }
+  .reel-frame {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    max-height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background: #000;
+  }
   .yt-thumb {
     position: absolute; inset: 0;
     background-size: cover;
@@ -931,9 +942,11 @@
     <div class="hero-right">
       <div class="hero-reel">
         <div class="reel-placeholder">
-          <div class="yt-thumb" data-yt-id="BrRRXJu4cUU" data-yt-title="Hero Showreel" style="background-image:url(&quot;https://img.youtube.com/vi/BrRRXJu4cUU/hqdefault.jpg&quot;)"></div>
-          <div class="play-btn">
-            <svg width="22" height="22" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+          <div class="reel-frame">
+            <div class="yt-thumb" data-yt-id="BrRRXJu4cUU" data-yt-title="Hero Showreel" style="background-image:url(&quot;https://img.youtube.com/vi/BrRRXJu4cUU/hqdefault.jpg&quot;)"></div>
+            <div class="play-btn">
+              <svg width="22" height="22" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+            </div>
           </div>
         </div>
       </div>
@@ -1415,7 +1428,7 @@
     iframe.setAttribute('referrerpolicy', 'strict-origin-when-cross-origin');
     iframe.allowFullscreen = true;
 
-    container.insertBefore(iframe, thumb);
+    thumb.parentNode.insertBefore(iframe, thumb);
     thumb.remove();
 
     const playIcon = container.querySelector('.play-btn, .thumb-icon');
