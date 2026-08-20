@@ -252,6 +252,19 @@
     position: absolute; inset: 0;
     background: rgba(0,0,0,0.28);
   }
+  .play-btn {
+    width: 72px; height: 72px;
+    border: 1.5px solid var(--accent);
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    transition: transform 0.3s, background 0.3s;
+    position: relative;
+    z-index: 2;
+    cursor: pointer;
+    background: rgba(8,8,8,0.4);
+  }
+  .play-btn:hover { transform: scale(1.08); background: rgba(232,201,122,0.08); }
+  .play-btn svg { fill: var(--accent); margin-left: 4px; }
   .reel-label {
     font-family: 'DM Mono', monospace;
     font-size: 11px;
@@ -412,6 +425,21 @@
     position: absolute; inset: 0;
     display: flex; align-items: center; justify-content: center;
   }
+  .thumb-icon {
+    width: 52px; height: 52px;
+    border: 1px solid rgba(232,201,122,0.5);
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    opacity: 0.9;
+    transform: scale(0.92);
+    transition: opacity 0.3s, transform 0.3s;
+    position: relative;
+    z-index: 2;
+    cursor: pointer;
+    background: rgba(8,8,8,0.4);
+  }
+  .thumb-icon svg { fill: var(--accent); margin-left: 3px; }
+  .work-card:hover .thumb-icon { opacity: 1; transform: scale(1); }
 
   .thumb-badge {
     position: absolute; top: 16px; left: 16px;
@@ -904,6 +932,9 @@
       <div class="hero-reel">
         <div class="reel-placeholder">
           <div class="yt-thumb" data-yt-id="BrRRXJu4cUU" data-yt-title="Hero Showreel" style="background-image:url(&quot;https://img.youtube.com/vi/BrRRXJu4cUU/hqdefault.jpg&quot;)"></div>
+          <div class="play-btn">
+            <svg width="22" height="22" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+          </div>
         </div>
       </div>
       <div class="hero-stat-strip" style="grid-template-columns: repeat(2, 1fr);">
@@ -964,6 +995,9 @@
         <div class="thumb-badge">Cinematic</div>
         <div class="thumb-content">
           <div class="yt-thumb" data-yt-id="BrRRXJu4cUU" data-yt-title="Informational Edit" style="background-image:url(&quot;https://img.youtube.com/vi/BrRRXJu4cUU/hqdefault.jpg&quot;)"></div>
+          <div class="thumb-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+          </div>
         </div>
       </div>
       <div class="card-info">
@@ -981,6 +1015,9 @@
         <div class="thumb-badge">Music Video</div>
         <div class="thumb-content">
           <div class="yt-thumb" data-yt-id="SOXk-ij0mXs" data-yt-title="Motivational Reel Edit" style="background-image:url(&quot;https://img.youtube.com/vi/SOXk-ij0mXs/hqdefault.jpg&quot;)"></div>
+          <div class="thumb-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+          </div>
         </div>
       </div>
       <div class="card-info">
@@ -998,6 +1035,9 @@
         <div class="thumb-badge">Commercial</div>
         <div class="thumb-content">
           <div class="yt-thumb" data-yt-id="9eQMS7KwxdA" data-yt-title="Creative Social Media Edit" style="background-image:url(&quot;https://img.youtube.com/vi/9eQMS7KwxdA/hqdefault.jpg&quot;)"></div>
+          <div class="thumb-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+          </div>
         </div>
       </div>
       <div class="card-info">
@@ -1013,6 +1053,9 @@
         <div class="thumb-badge">Documentary</div>
         <div class="thumb-content">
           <div class="yt-thumb" data-yt-id="Ohu_OmoSwj0" data-yt-title="Engaging Explainer Edit" style="background-image:url(&quot;https://img.youtube.com/vi/Ohu_OmoSwj0/hqdefault.jpg&quot;)"></div>
+          <div class="thumb-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+          </div>
         </div>
       </div>
       <div class="card-info">
@@ -1030,6 +1073,9 @@
         <div class="thumb-badge">Reel</div>
         <div class="thumb-content">
           <div class="yt-thumb" data-yt-id="fVN4Z84f_Ps" data-yt-title="Cinematic Documentary Edit" style="background-image:url(&quot;https://img.youtube.com/vi/fVN4Z84f_Ps/hqdefault.jpg&quot;)"></div>
+          <div class="thumb-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+          </div>
         </div>
       </div>
       <div class="card-info">
@@ -1047,6 +1093,9 @@
         <div class="thumb-badge">VFX</div>
         <div class="thumb-content">
           <div class="yt-thumb" data-yt-id="PWYmGFkd9U8" data-yt-title="Brand Promo Edit" style="background-image:url(&quot;https://img.youtube.com/vi/PWYmGFkd9U8/hqdefault.jpg&quot;)"></div>
+          <div class="thumb-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+          </div>
         </div>
       </div>
       <div class="card-info">
@@ -1065,6 +1114,9 @@
         <div class="thumb-badge">Cinematic</div>
         <div class="thumb-content">
           <div class="yt-thumb" data-yt-id="Y2ZtIkSRG1M" data-yt-title="Synthetic Cinema – Rapid Story Cuts" style="background-image:url(&quot;https://img.youtube.com/vi/Y2ZtIkSRG1M/hqdefault.jpg&quot;)"></div>
+          <div class="thumb-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+          </div>
         </div>
       </div>
       <div class="card-info">
@@ -1082,6 +1134,9 @@
         <div class="thumb-badge">Brand</div>
         <div class="thumb-content">
           <div class="yt-thumb" data-yt-id="K3NRlq9aTeU" data-yt-title="Pure Momentum – Dynamic Brand Cuts" style="background-image:url(&quot;https://img.youtube.com/vi/K3NRlq9aTeU/hqdefault.jpg&quot;)"></div>
+          <div class="thumb-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+          </div>
         </div>
       </div>
       <div class="card-info">
@@ -1340,10 +1395,10 @@
     });
   });
 
-  // Lazily load YouTube embeds only when the user clicks the thumbnail.
+  // Lazily load YouTube embeds only when the user clicks the thumbnail or play icon.
   // This avoids YouTube's title/info bar appearing on page load. Once loaded,
   // the standard native YouTube player (with its own controls) takes over —
-  // no custom overlay buttons.
+  // the play icon is removed since native controls include their own.
   function loadYouTubeEmbed(container, muted) {
     const thumb = container.querySelector('.yt-thumb');
     if (!thumb) return null;
@@ -1363,14 +1418,17 @@
     container.insertBefore(iframe, thumb);
     thumb.remove();
 
+    const playIcon = container.querySelector('.play-btn, .thumb-icon');
+    if (playIcon) playIcon.remove();
+
     return iframe;
   }
 
-  document.querySelectorAll('.yt-thumb').forEach(thumb => {
-    thumb.addEventListener('click', e => {
+  document.querySelectorAll('.hero-reel .play-btn, .thumb-icon, .yt-thumb').forEach(el => {
+    el.addEventListener('click', e => {
       e.preventDefault();
       e.stopPropagation();
-      const container = thumb.closest('.reel-placeholder') || thumb.closest('.thumb-content');
+      const container = el.closest('.reel-placeholder') || el.closest('.thumb-content');
       if (!container || container.querySelector('iframe')) return;
       loadYouTubeEmbed(container, false);
     });
